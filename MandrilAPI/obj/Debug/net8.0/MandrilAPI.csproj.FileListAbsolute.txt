@@ -31,3 +31,4 @@ C:\Users\axel-\Desktop\API REST C# con ASP.NET CORE\MandrilAPI\obj\Debug\net8.0\
 C:\Users\axel-\Desktop\API REST C# con ASP.NET CORE\MandrilAPI\obj\Debug\net8.0\MandrilAPI.pdb
 C:\Users\axel-\Desktop\API REST C# con ASP.NET CORE\MandrilAPI\obj\Debug\net8.0\MandrilAPI.genruntimeconfig.cache
 C:\Users\axel-\Desktop\API REST C# con ASP.NET CORE\MandrilAPI\obj\Debug\net8.0\ref\MandrilAPI.dll
+C:\Users\axel-\Desktop\API REST C# con ASP.NET CORE\MandrilAPI\obj\Debug\net8.0\MandrilAPI.sourcelink.json
