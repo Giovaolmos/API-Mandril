@@ -29,17 +29,17 @@ return Ok(mandril);
     {
      var maxMandrilId = MandrilDataStore.Current.Mandriles.Max(x => x.Id);
 
-     var mandrilNuevo = new Mandril(){
+     var mandrilNuevoo = new Mandril(){
      Id = maxMandrilId + 1,
      Nombre = mandrilInsert.Nombre,
      Apellido = mandrilInsert.Apellido
      };
 
-     MandrilDataStore.Current.Mandriles.Add(mandrilNuevo);
+     MandrilDataStore.Current.Mandriles.Add(mandrilNuevoo);
 
      return CreatedAtAction(nameof(GetMandrilById), 
-     new { mandrilId = mandrilNuevo.Id },
-     mandrilNuevo
+     new { mandrilId = mandrilNuevoo.Id },
+     mandrilNuevoo
      );
     }
 }
