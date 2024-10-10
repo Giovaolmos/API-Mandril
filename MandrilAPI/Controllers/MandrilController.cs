@@ -42,4 +42,16 @@ return Ok(mandril);
      mandrilNuevoo
      );
     }
+
+    [HttpPut("{mandrilId}")]
+    public ActionResult<Mandril> PutMandril([FromRoute] int mandrilId, [FromBody]MandrilInsert mandrilInsert)
+    {
+        var mandril = MandrilDataStore.Current.Mandriles.FirstOrDefault(x => x.Id == mandrilId);
+        if(mandril == null)
+        return NotFound("El mandril que quieres editar no existe");
+
+        mandril.Nombre = mandrilInsert.Nombre;
+        mandril.Apellido = mandrilInsert.Apellido;
+        return NoContent();
+    }
 }
