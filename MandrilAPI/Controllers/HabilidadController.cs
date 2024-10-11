@@ -30,11 +30,26 @@ public class HabilidadController : ControllerBase
        return Ok(habilidad);
     }
 
-    // [HttpPost]
-    // public ActionResult<Habilidad> PostHabilidad()
-    // {
+    [HttpPost]
+    public ActionResult<Habilidad> PostHabilidad(int mandrilId, HabilidadInsert habilidadInsert)
+    {
+ var mandril = MandrilDataStore.Current.Mandriles.FirstOrDefault(x => x.Id == mandrilId);
+        if(mandril == null) return NotFound("El mandril al que quieres agregarle una habilidad no existe");
+      var habilidadExistente = mandril.Habilidades.FirstOrDefault(h => h.Nombre == habilidadInsert.Nombre);
+      if(habilidadExistente != null) return BadRequest("Ya existe una habilidad con este nombre.");
 
-    // }
+      var maxIdHabilidad = mandril.Habilidades.Max(h => h.Id);
+
+      var habilidadNueva = new Habilidad(){
+        Id = maxIdHabilidad + 1,
+        Nombre = habilidadInsert.Nombre,
+        Potencia = habilidadInsert.Potencia
+      };
+      mandril.Habilidades.Add(habilidadNueva);
+      return CreatedAtAction(nameof(GetHabilidades),
+      new {mandrilId = mandrilId, habilidadId = habilidadNueva.Id },
+      habilidadNueva);
+    }
 
     // [HttpPut]
     // public ActionResult<Habilidad> PutHabilidad()

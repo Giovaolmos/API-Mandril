@@ -11,5 +11,5 @@ public class Mandril
 
     public string Apellido { get; set; } = string.Empty;
 
-    public List<Habilidad>? Habilidades { get; set; }
+    public List<Habilidad>? Habilidades { get; set; } = new List<Habilidad>();
 }
