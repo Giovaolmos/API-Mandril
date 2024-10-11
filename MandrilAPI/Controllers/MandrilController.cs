@@ -54,4 +54,13 @@ return Ok(mandril);
         mandril.Apellido = mandrilInsert.Apellido;
         return NoContent();
     }
+
+    [HttpDelete("{mandrilId}")]
+    public ActionResult<Mandril> DeleteMandril(int mandrilId)
+    {
+        var mandril = MandrilDataStore.Current.Mandriles.FirstOrDefault(x => x.Id == mandrilId);
+        if(mandril == null) return NotFound("El mandril que quieres eliminar no existe");
+        MandrilDataStore.Current.Mandriles.Remove(mandril);
+        return NoContent();
+    }
 }
