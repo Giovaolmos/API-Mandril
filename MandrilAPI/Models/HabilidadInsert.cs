@@ -10,6 +10,5 @@ public class HabilidadInsert
         public string Nombre { get; set; } = string.Empty;
     
          [Required]
-         [MaxLength(50)]
         public EPotencia Potencia { get; set; }
 }
