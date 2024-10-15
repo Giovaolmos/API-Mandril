@@ -48,28 +48,7 @@ namespace MandrilAPI.Services
                         new Habilidad { Id = 6, Nombre = "Sigilo", Potencia = Habilidad.EPotencia.Moderado }
                     }
                 },
-                new Mandril
-                {
-                    Id = 4,
-                    Nombre = "Mandril Cuatro",
-                    Apellido = "Apellido Cuatro",
-                    Habilidades = new List<Habilidad>
-                    {
-                        new Habilidad { Id = 7, Nombre = "Carisma", Potencia = Habilidad.EPotencia.Extremo },
-                        new Habilidad { Id = 8, Nombre = "Percepción", Potencia = Habilidad.EPotencia.Intenso }
-                    }
-                },
-                new Mandril
-                {
-                    Id = 5,
-                    Nombre = "Mandril Cinco",
-                    Apellido = "Apellido Cinco",
-                    Habilidades = new List<Habilidad>
-                    {
-                        new Habilidad { Id = 9, Nombre = "Estrategia", Potencia = Habilidad.EPotencia.RePotente },
-                        new Habilidad { Id = 10, Nombre = "Colaboración", Potencia = Habilidad.EPotencia.Moderado }
-                    }
-                }
+                
             };
         }
     }
