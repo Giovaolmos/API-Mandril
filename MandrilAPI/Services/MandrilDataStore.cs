@@ -45,7 +45,7 @@ namespace MandrilAPI.Services
                     Habilidades = new List<Habilidad>
                     {
                         new Habilidad { Id = 5, Nombre = "Resistencia", Potencia = Habilidad.EPotencia.Intenso },
-                        new Habilidad { Id = 6, Nombre = "Sigilo", Potencia = Habilidad.EPotencia.Moderado }
+                        new Habilidad { Id = 6, Nombre = "Sigilo", Potencia = Habilidad.EPotencia.Extremo }
                     }
                 },
                 
